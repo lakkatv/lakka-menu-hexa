@@ -37,6 +37,7 @@ function love.load()
 	itemnav = false
 
 	global = { x = 0 }
+	global2 = { x = 0 }
 	reflect = { x = 0 }
 	panel = { x = 0, color = {255, 255, 255} }	
 	shadow = { x = 0, color = {0, 0, 0, 0.2*255} }
@@ -476,7 +477,7 @@ function love.draw()
 				offset = 110
 			end
 			draw_hexa(
-				234 + x*195 + global.x,
+				234 + x*195 + global.x + global2.x,
 				-y*220 + lg.getHeight()/2 + offset + 31,
 				nil,
 				{0, 0, 0},
@@ -498,7 +499,7 @@ function love.draw()
 					offset = 110
 				end
 				draw_hexa(
-					234 + x*195 + global.x,
+					234 + x*195 + global.x + global2.x,
 					-y*220 + lg.getHeight()/2 + offset + 31,
 					core.core_icon,
 					core.color,
@@ -519,7 +520,7 @@ function love.draw()
 	end
 
 	draw_hexa(
-		234 + X*195 + global.x,
+		234 + X*195 + global.x + global2.x,
 		-Y*220 + lg.getHeight()/2 + offset + 31,
 		core.core_icon,
 		core.color,
@@ -661,6 +662,7 @@ function love.keypressed(key)
 			hexaNavAuthorised = false
 			tween(0.1, panel, { x = - 450 }, 'outSine')
 			tween(0.1, shadow, { x = - 460 }, 'outSine')
+			tween(0.1, global2, { x = - 230 }, 'outSine')
 			panel.color = core.color[2]
 		end
 	end
@@ -670,5 +672,6 @@ function love.keypressed(key)
 		itemnav = false
 		tween(0.1, panel, { x = 0 }, 'outSine')
 		tween(0.1, shadow, { x = 0 }, 'outSine')
+		tween(0.1, global2, { x = 0 }, 'outSine')
 	end
 end
