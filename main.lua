@@ -445,25 +445,25 @@ function love.draw()
 
 	for i=0,1 do
 		lg.polygon('fill',
-			524+reflect.x+i*1793, 0,
-			595+reflect.x+i*1793, 0,
-			145+reflect.x+i*1793, 1080,
-			 74+reflect.x+i*1793, 1080)
+			524+reflect.x + global2.x /2 +i*1793, 0,
+			595+reflect.x + global2.x /2 +i*1793, 0,
+			145+reflect.x + global2.x /2 +i*1793, 1080,
+			 74+reflect.x + global2.x /2 +i*1793, 1080)
 		lg.polygon('fill',
-			668+reflect.x+i*1793, 0,
-			833+reflect.x+i*1793, 0,
-		   	383+reflect.x+i*1793, 1080,
-			218+reflect.x+i*1793, 1080)
+			668+reflect.x + global2.x /2 +i*1793, 0,
+			833+reflect.x + global2.x /2 +i*1793, 0,
+		   	383+reflect.x + global2.x /2 +i*1793, 1080,
+			218+reflect.x + global2.x /2 +i*1793, 1080)
 		lg.polygon('fill',
-		   1204+reflect.x+i*1793, 0,
-		   1522+reflect.x+i*1793, 0,
-		   1072+reflect.x+i*1793, 1080,
-			754+reflect.x+i*1793, 1080)
+		   1204+reflect.x + global2.x /2 +i*1793, 0,
+		   1522+reflect.x + global2.x /2 +i*1793, 0,
+		   1072+reflect.x + global2.x /2 +i*1793, 1080,
+			754+reflect.x + global2.x /2 +i*1793, 1080)
 		lg.polygon('fill',
-		   1603+reflect.x+i*1793, 0,
-		   1731+reflect.x+i*1793, 0,
-		   1281+reflect.x+i*1793, 1080,
-		   1153+reflect.x+i*1793, 1080)
+		   1603+reflect.x + global2.x /2 +i*1793, 0,
+		   1731+reflect.x + global2.x /2 +i*1793, 0,
+		   1281+reflect.x + global2.x /2 +i*1793, 1080,
+		   1153+reflect.x + global2.x /2 +i*1793, 1080)
 	end
 
 
@@ -662,7 +662,7 @@ function love.keypressed(key)
 			hexaNavAuthorised = false
 			tween(0.1, panel, { x = - 450 }, 'outSine')
 			tween(0.1, shadow, { x = - 460 }, 'outSine')
-			tween(0.1, global2, { x = - 230 }, 'outSine')
+			tween(0.1, global2, { x = - 70 }, 'outSine')
 			panel.color = core.color[2]
 		end
 	end
