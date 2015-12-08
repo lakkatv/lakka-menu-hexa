@@ -51,7 +51,7 @@ function love.load()
 	cores = {
 		{
 			name = "Settings",
-			core_icon = lg.newImage("icons/Settings.png"),
+			core_icon = lg.newImage("icons/Settings-content.png"),
 			content_icon = lg.newImage("icons/Settings-content.png"),
 			color = grey,
 			items = {
